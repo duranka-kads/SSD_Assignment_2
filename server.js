@@ -45,6 +45,10 @@ app.get('/login', (req, res) => {
     res.render("login");
 })
 
+app.get('/success', (req, res) => {
+    res.render("success");
+})
+
 app.get('/profile', checkAuthentication, (req, res)=>{
     let user = req.user;
     res.render('profile', {user});
