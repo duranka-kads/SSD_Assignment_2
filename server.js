@@ -88,6 +88,20 @@ function checkAuthentication(req, res, next){
       })
 
 }
+
+const oauth2Client = new google.auth.OAuth2(
+    CLIENT_ID_GOOGLE_DRIVE,
+    CLIENT_SECRET,
+    REDIRECT_URL
+  );
+
+  oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+  const drive = google.drive({
+    version: 'v3',
+    auth: oauth2Client,
+  });
+
 app.post('/single', async (req, res, next) => {
     try {
         const file = req.files.mFile
@@ -110,6 +124,37 @@ app.post('/single', async (req, res, next) => {
     }
 })
 
+
+const filePath = path.join(__dirname, 'images.jpg');
+
+  function bufferToStream(binary) {
+
+    const readableInstanceStream = new Readable({
+      read() {
+        this.push(binary);
+        this.push(null);
+      }
+    });
+
+    return readableInstanceStream;
+}
+
+  async function uploadFile(file, name) {
+    try {
+      const response = await drive.files.create({
+        requestBody: {
+          name: name,
+          mimeType: 'image/jpeg',
+        },
+        media: {
+          mimeType: 'image/jpeg',
+          body: bufferToStream(file)
+        },
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`)
