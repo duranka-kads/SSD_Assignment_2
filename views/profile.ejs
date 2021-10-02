@@ -10,6 +10,16 @@
       body {
         background-image: url('https://thumbs.dreamstime.com/b/purple-petunia-flowers-bed-beautiful-blurred-nature-background-banner-website-garden-concept-toned-54798543.jpg');
       }
+
+      div {
+          background-color: rgb(255, 255, 255);
+          width: 300px;
+          border: 15px solid rgb(3, 1, 134);
+          padding: 50px;
+          margin: 20px;
+          margin-left: 500px;
+
+      }
       
      
 
@@ -26,11 +36,24 @@
       <th><a  href="/logout">Sign Out</a></th>
     </tr>
     </table>
-   
-      
 
-   
 
+
+
+  <div>
+      <form action="/single" method="post" enctype="multipart/form-data">
+          <img style="height: 60px; margin-left: 100px;" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO0AAADUCAMAAABH5lTYAAABiVBMVEX/////ugAmhPwArEcAgy0AZtrqQzXV5P4Pf/z/vQAdgvypy/4ArkEAY94Amnn5nhjS49YAfhvpPDYAqkAAgC8AYtkAfzD/vwD/tgD/+usAqDvqPzAAZtn//vr0/Pj/89jpOyv/xzsAo0EAnD0AjjQAhzD73tz/78f/35UAfDL//PD/1XFbxYIAoEDY8eL/wB3/2YC/6dDe8+f/zVf/6rT/24p/0Jz/xTOu4sKK1aUaevD0Pybw9/3+9fT61dI2gOAAiv/2sazxiIDl7/t4v5EqnFRdsnyx2sBMpWiOw549mVaLyqDN0JQ7u2lRjiLKrw2BnBzruACaoRia27PQsQsnt2BxzZRhkyK25cezqBP/zl7/5alCjCdSwXrQswl8mx3juQiYsifm8NJpttOpu8L96teXXJvRTVl0bbj3PRjtYFNbn+i7VXJXec+XY5Y2gezsU0eUu+5cl+XwgXixWHnzmJG+1vVIfN/WSkxpccSdYJD3vLjDU2zPTFJGieLub2b0pqGpVYVwqf32SobCAAALsElEQVR4nNWdjV/bxh3GbZnFYNat1IoxNhiRAiEkJcHkjYZ0blibtRt5IxBGyNa9Nk2XQtKutEuWrPzlkyyfbMmn0708p7t+/wCZ5/Ocfs/d7yeJQkETrfa7srRbuv4oXbRWf/vJwoQMC598evtnJbd9+9OFiRF5JkZ+d7ttWgQn7c8+n1DRGgr+/LOfg97270eUpYZ6R/4wZVpMFqtbVYjWkRH3ztjcWdNy2GyXqqX3QXLvjtXHlmZMK0qntV4t+Sy4AK3n7o0VfS5ZK7d1oSu2dAYg1h2531Vb3LdV7nqjFDKvrrb2YLIrtli/Yqfc7RJB3Vz34H6R8Ni0MBqrpT7Khap2dyxSO2ZhZW5tVQfkLihae2cyEluszy2bFjfE9qBYRXPdkYd9a32WTItL0t4pxZhXSaFe+kRctG1TtduIq1UpVO7C/ZjYYv28aXlxVkpJ5hXUPpiMq7WsUJF9xSDShcp9lBRbrO/bVKj2hsXKFyr37lhSbbF42bTEPq0dilpZcynW+kzaY+42TWzpA0lvH1LEFuvWpNDKDk2sZKFyH1DWcZBCs6Zl9tilWiuZQsn0sS2FVht0sXLm/pFurS/XihSipQ8xV7xQ3Umx1pYUup4qViaFaOlDsODo10rXWhJOodojhtjipPlz/XrqXRsgmEITX7DU1q+YFpuWPlKFqpaSPgTjKZReokJEUmiwPUNnzazY9PQhvM9/0K2lpk+0lo2mUOtJhrUlgUJVo26Q42rXTKYQfYOcMJd7If8py9qi0RRipw9hnk/suT9nWls0eha6mnnXBvAVqmg4kLGWL5kSm5U+QubWhtozdIylUFb6ROZyFKpa+gY5Ye6amR3VKqdYrkLlZqZPhJEUam9xq81OIZerRIXmzpnoLvOkDyFzu7zwkNtaI6ODNr/WUmahytogx5nMv1AlhwNsMlIorT2TspZzb9qsZisUMJe/RHXJfXTAmz6RuYxC5d65KCTWPwvlm0LXhdZxAOMs5IqUqC71XLfLLYH0IaSa6zLbM3RyHWCvi4tNT6GDL4TF5jo6EEsfQkqhOieUPoQcB9hi6UOgp5A7ISM2xxQSTR+muQIb5Dg5pRBjOJBhLqVQuY9E04eQUwqxhgNsKClUE04fQj4p1OI8w9MYMlfg7DPEtTwKlUz6EJIp5B4whwMZ5uYwOuBtz9BJFCqxs0+SHJo2HB1kFnGxB/LrODBX++hANn0IsaaNdPoQNKcQz3CAzUCh4hgOZKC5aSPSnqHTL1Su+NlnCK0pJLdBjhMVqto9VWv9c71Oc1XSh0C2y67M2SeJzhRSLVEhPXOz55c8aGzayG6Q45zpWau+jos6U2hP6qA3TJhC6iUqlKvpeU/19CEsBBtkjFhtA2z20zMifOCf4QElqidXS6HiG03zMV+7B7K2qCmF5NozdM4cyJ7hKdTP48/1mPQh/AUnVksKSXSQ09n66zWg2vocWiwqfbo0tguP60i54BQSGU1nUt1qFZbngGrRZyHEBrnPnn/Fy0i12NEB4uwTUb3QveY+ci1DUwiZPqXSSveas0Cx0NEBNH2qV3tXvQQ1F5dCsA1yIHaLfLVjFptCqC2G+GiagZ8+BGwKgZo2yVdrlQjShzAzh5QLGh1g02d14MqXcUeDIugxquFXaxVo7A5eeuY8tFAhRgeY9gxhJXZt61LoOlJrdTtx9SWkXPWXdHHtmYCt5DejpuaQapUH2Lj2jE9jb+j6l6EppFiowOlD+YVrFqVQ2qu1cqxQfuEsMoXU3jqApk91l/ob9qQQtESV6N8tnAKKVRod0D7sIE1jPeVXlpDmyqcQtj3zJO2TlOAUkh0dbGtOH4IVKYRtzzxh/NIaUq7k857Y9Fll/BI4hWR2VHraM1RmzDdtoMOBEvujqlNQcyVGB/LPblIYOvskMZxCOaUPYRlaqITfOsAPB9gYHR20oev4Ascvmhwd6D/7JJk1dxbCpk/aBjnOFaBasRSClqgdvk96zwIfThA6C0E3yNXrnL/6GKhWYIDd3kKK3eL9HP8ydHTAPcDOb4McB7pdLnIWKh2jaT6wKcTVtJF+uYkKZ4kKmYU86NmD7zGqPaBW3vQh5J5C9O9uyorlLlEh0KYNzwAb257hTR9CzgNstZebEjDbM1Rm1oBqs0cHVw2lD+EsUm3WWWgF2kGmDwfYQEcHRaa52PTJaM/QwY4OmANsvaNpPrADbEYKyXzYIV3s0Giaj9xSKK/hABvs6CA1hQynTwS0I5eaQqbOPkmwZ6GUV0r4v3zGQYM5HMgAOzqgn4Wwo2mV/7iGHR3s034i3+EAG+2PUWHT54naP9ObgjZtKANsvu9uctKQL1EhZ/WmkC3pQ9D6MG8Lmj47PMMBNtjucqIjBx0OKKUPAZpC8e+AQEtUaQfxD12XoR252OjApvQhQJs2gynUhnbeLmD+Vy90gD348VZoe6aqmj4E6AC7/9YB9tlNkeEAG+joIHqMCtt5U08fAnZ00DMX+8Q1pkSFQJ+06d256l/aGRALSR/CMnKL0SvL0Lf0RIcDbJAD7LD/iPyyAyp9CDPIQnVxxhcLfeQalT4E5OigPjtTaO/itEoNB9gARwf1pSnsUQ+XPgTkY1T7s8itBTR9CMCmzTVfbeOXKKDpQ5iZK46B8NW++ysYfxvXwd9/DeMfhfI7MJyKDpx/3ngPg/dRoXz6FyAcTRx+eeMUhOZiofwbjNzpD3Wp7Tz9qglR+2yxsPk1yFxdYn3+BTG3eWuxsDH+DkSsNmt9nnsIc71XNwuFDYi3OsU6nW++Aqht3gwS7Q1A7rROsX6hOuWpi33bzW/AUtZXokI6T9XvXO9VV235UN1cvWIRKdQ8Wgw3Z+pVWbO1vrnPbygWKu/fva1oWXkp6xbry1VNIW+R7LxVza3oV+scHymZ692KzhmKd672ddzlGxVzo7s24IWKWs3pE6FirvfxwCFyQ2WznI+1jvNUXm3z2c3BM/O4gtqcxFYOX0tvMZqvYh2CjZeycnVvLAZ4LnvnNr+NWesXqmlZtbmJdZzvZOV+lOz/fC0ZujmKlU2haGPRZ1MqhXJcxwFSZ6FY+qgVqlzFOp0jiULV/HhYrFQK5Wxt0LQRF/vsJkVt4XsJc/MVK7Vd9oZKVMhL4UKVs7XBWUjUXO9buljh7XLe67gr9ycxc6klKkQshaZzX8cBx+8JpRAlfaJCJWauAWtFC1XziFqiQoTOQnnuogbl/iCwlqnpE5kr0H80cdd21f7I311uvmVY66cQ/51ryFqn0uHfLt9ISZ+oUHGba0iszzFvd3mgPUOn/CGfXFPrOKDzH75CxUgfwgvOtWxOrOMc/sBlrve/LLG8KWTQWh+u0QEzfQjjXAvZqFinwzU6eJUtlq9pY9ZartGBl2zP0OFIIcNiHZ6mTdrZJ0l2CuUxHGCT2bTJTB9C5lnIvLWZowOO9CFkpJDhEhWSkUI3WBvkOOwUMrmxGOApS23ziFusX6iY3WXTOnu8Zq1lnvSJzGWlkB3WBqOD1ELl3eJKH8JmulpbxFac9KZNk7tEhaQ3bcynD+H4VIq53OkTmZvWXbbFWie9aZPSQWZBT6FpK9KHcEgfHXj86RNBN9cia4OmDe3O7T0GJgZ9dGBaYIxK5zVlLfNukOPQtsum9SXoHA+nkHCJCqE8p23VOg7ofDdkrieYPoThQmVa3DDHye0yR3uGTjKFTltn7XAKSaQPIT7Atit9CJ3/xupyU2SDHCcxOrDQ2u7oYHAdy6QPoTx92nKx8Rlnc/jpGRH6Y7BpizbIcY77cyHpEhWy0Z/XW2pt8NYBMZezzZgOqctmRtN8HH7p9W5aRbGF6O0oa611yOjAeya5r4i52y3MVqZPRGCu9xYg1pcb3Ls2W+s4P3pNweYMgxeHFt+1XX46kjjTplE+qYyaFpROZbTyErKKB/R2Ru0M3Mro4UkZqtVno/zizWjFNsGV0dGTcbjWkM3xkzejNvHm5PtNPVK7cjfLdrG5IfT3/x+FzrbKqXGvZAAAAABJRU5ErkJggg=='/>
+          <h3 style="padding-left: 60px;">Image Box</h3>
+          <input style="padding-left: 70px;"
+                 type="file"
+                 name="mFile"
+                 id=""
+                 required
+                 accept="image/jpeg, image/png"
+          />
+          <input  type="submit" style="color: blue; margin-left: 70px; height: 30px; width: 90px; padding-left: 14px;" value="upload" />
+      </form>
+  </div>
 
    
     
